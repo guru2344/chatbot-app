@@ -10,13 +10,13 @@ async function sendMessage() {
 
     input.value = "";
 
-    const response = await fetch("http://localhost:8080/api/chat", {
-        method: "POST",
-        headers: {
-            "Content-Type": "text/plain"
-        },
-        body: userText
-    });
+    const response = await fetch("https://chatbot-app-3-qcp2.onrender.com/api/chat", {
+    method: "POST",
+    headers: {
+        "Content-Type": "text/plain"
+    },
+    body: userText
+});
 
     const data = await response.text();
 
